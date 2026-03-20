@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { PhotoGallery } from "@/components/photo-gallery"
+import { RolesList } from "@/components/roles-list"
 
 export default function Home() {
   const [showResult, setShowResult] = useState(false)
@@ -69,6 +70,7 @@ export default function Home() {
     
       <PhotoGallery />
 
+      <RolesList />
       
       <section className="py-12 md:py-20 px-4">
         <div className="max-w-xl mx-auto text-center">

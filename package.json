@@ -2,11 +2,14 @@
   "name": "my-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/MatheusCEvangelista/Isaa",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "export": "next export",
+    "deploy": "next build && gh-pages -d out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
