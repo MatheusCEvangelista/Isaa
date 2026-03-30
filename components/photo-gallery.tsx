@@ -17,7 +17,7 @@ const placeholderPhotos: Photo[] = [
   { id: 3, src: "/photos/WhatsApp Image 2026-03-17 at 23.31.08 (1).jpeg", alt: "Nosso momento especial 3" },
   { id: 4, src: "/photos/WhatsApp Image 2026-03-17 at 23.31.08 (2).jpeg", alt: "Nosso momento especial 4" },
   { id: 5, src: "/photos/WhatsApp Image 2026-03-17 at 23.31.08.jpeg", alt: "Nosso momento especial 5" },
-  { id: 6, src: "/photos/foto6.jpg", alt: "Nosso momento especial 6" },
+  { id: 6, src: "/photos/IMG-20260329-WA0043.jpg", alt: "Nosso momento especial 6" },
 ]
 
 export function PhotoGallery() {
@@ -68,21 +68,17 @@ export function PhotoGallery() {
           onClick={() => setSelectedPhoto(null)}
         >
           <div className="relative max-w-4xl w-full aspect-square md:aspect-video rounded-2xl overflow-hidden bg-muted">
-            {/* Placeholder - substitua pelo Image quando tiver fotos */}
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary/20 to-accent/40">
               <Heart className="w-24 h-24 text-primary" />
               <span className="text-xl text-foreground mt-4">{selectedPhoto.alt}</span>
             </div>
-            
-            {/* Descomente quando adicionar fotos reais */}
             { <Image
               src={selectedPhoto.src}
               alt={selectedPhoto.alt}
               fill
               className="object-contain"
             /> }
-          </div>
-          
+          </div>  
           <Button
             variant="ghost"
             size="icon"

@@ -5,6 +5,8 @@ import { Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { PhotoGallery } from "@/components/photo-gallery"
 import { RolesList } from "@/components/roles-list"
+import MoviesList from "@/components/movies"
+import PersonSection from "@/components/personSection"
 
 export default function Home() {
   const [showResult, setShowResult] = useState(false)
@@ -51,6 +53,7 @@ export default function Home() {
       </main>
     )
   }
+  
 
   return (
     <main className="min-h-screen bg-background">
@@ -71,6 +74,22 @@ export default function Home() {
       <PhotoGallery />
 
       <RolesList />
+          <div className="flex items-center justify-center gap-3 mb-2">
+          <Heart className="w-8 h-8 text-primary fill-primary" />
+          <h1 className="text-3xl md:text-5xl font-bold text-foreground">
+            Filmes para ver junto!
+          </h1>
+          <Heart className="w-8 h-8 text-primary fill-primary" />
+        </div>
+      <MoviesList/>
+      <div className="flex items-center justify-center gap-3 mb-2">
+          <Heart className="w-8 h-8 text-primary fill-primary" />
+          <h1 className="text-3xl md:text-5xl font-bold text-foreground">
+            Para a mulher mais sensacional que conheço!
+          </h1>
+          <Heart className="w-8 h-8 text-primary fill-primary" />
+        </div>
+    <PersonSection/>
       
       <section className="py-12 md:py-20 px-4">
         <div className="max-w-xl mx-auto text-center">
